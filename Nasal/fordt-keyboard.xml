@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+   <key n="68">
+    <name>D</name>
+    <desc>Capotte</desc>
+    <binding>
+     <command>nasal</command>
+     <script>kombi.doorsystem.passengerexport();</script>
+    </binding>
+   </key>
+
+   <key n="100">
+    <name>d</name>
+    <desc>Pilot and passanger doors</desc>
+    <binding>
+     <command>nasal</command>
+     <script>kombi.doorsystem.crewexport();</script>
+    </binding>
+   </key>
+
+</PropertyList>
+

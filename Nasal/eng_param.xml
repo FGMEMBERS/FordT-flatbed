@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <name>Engine parameters</name>
+  <width>200</width>
+  <height>400</height>
+  <layout>vbox</layout>
+
+
+     <text>
+       <label>Speed(kts):</label>
+     </text>
+
+     <text>
+      <live>true</live>
+      <property>/velocities/groundspeed-kt</property>
+      <color>
+       <red>0.8</red>
+       <green>0.8</green>
+       <blue>0.8</blue>
+      </color>
+     </text>
+
+    <text>
+       <label>Heading(degs):</label>
+     </text>
+
+     <text>
+      <live>true</live>
+      <property>/orientation/heading-deg</property>
+      <color>
+       <red>0.8</red>
+       <green>0.8</green>
+       <blue>0.8</blue>
+      </color>
+     </text>
+
+  <text>
+       <label>Latitude(decimal):</label>
+     </text>
+
+     <text>
+      <live>true</live>
+      <property>/position/latitude-deg</property>
+      <color>
+       <red>0.8</red>
+       <green>0.8</green>
+       <blue>0.8</blue>
+      </color>
+     </text>
+
+   <text>
+       <label>Longitude(decimal):</label>
+     </text>
+
+     <text>
+      <live>true</live>
+      <property>/position/longitude-deg</property>
+      <color>
+       <red>0.8</red>
+       <green>0.8</green>
+       <blue>0.8</blue>
+      </color>
+     </text>
+
+     <text>
+       <label>RPM:</label>
+     </text>
+
+     <text>
+      <live>true</live>
+      <property>/engines/engine/rpm</property>
+      <color>
+       <red>0.8</red>
+       <green>0.8</green>
+       <blue>0.8</blue>
+      </color>
+     </text>
+
+     <text>
+       <label>Gear:</label>
+     </text>
+
+     <text>
+      <live>true</live>
+      <property>/engines/engine/gear</property>
+      <color>
+       <red>0.8</red>
+       <green>0.8</green>
+       <blue>0.8</blue>
+      </color>
+     </text>
+
+     <text>
+       <label>Throttle:</label>
+     </text>
+
+     <text>
+      <live>true</live>
+      <property>/controls/flight/elevator</property>
+      <color>
+       <red>0.8</red>
+       <green>0.8</green>
+       <blue>0.8</blue>
+      </color>
+     </text>
+
+</PropertyList>

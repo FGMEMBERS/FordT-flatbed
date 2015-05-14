@@ -1,0 +1,689 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+<combat>false</combat>
+<hitcount>4</hitcount>
+<size>1</size>
+
+<sim>
+
+  <description>Ford Model T flatbed</description>
+  <author>LesterBoffo/Alral-FDM from Detlef's jeep</author>
+  <status>alpha</status>
+  <flight-model>yasim</flight-model>
+  <aero>FordT-flatbed-yasim</aero>
+
+<!--Modifications by Alral-->
+
+  <virtual-cockpit archive="y">true</virtual-cockpit>
+  <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
+
+  <sound>
+   <path>Aircraft/FordT-flatbed/Sounds/fordt-flatbed-sound.xml</path>
+  </sound>
+
+  <model>
+   <path>Aircraft/FordT-flatbed/Models/ford_t_flatbed.xml</path>
+   <crew>
+     <pilot>
+       <visible type="int">1</visible>
+     </pilot>
+   </crew>
+		<livery>
+     <file/>
+		 <name/>
+		 <texture/>
+		 <texture-roof/>
+		</livery>
+  </model> 
+
+		<startup>
+			<splash-texture>Aircraft/FordT-flatbed/splash.png</splash-texture>
+		</startup>
+
+    <chase-distance-m type="double" archive="y">-14.0</chase-distance-m>
+
+  <view n="100">
+    <name>Walk View</name>
+    <type>lookfrom</type>
+    <config>
+      <eye-lat-deg-path>sim/walker/latitude-deg</eye-lat-deg-path>
+      <eye-lon-deg-path>sim/walker/longitude-deg</eye-lon-deg-path>
+      <eye-alt-ft-path>sim/walker/altitude-ft</eye-alt-ft-path>
+      <eye-heading-deg-path>sim/walker/heading-deg</eye-heading-deg-path>
+      <eye-roll-deg-path>sim/walker/roll-deg</eye-roll-deg-path>
+      <eye-pitch-deg-path>sim/walker/pitch-deg</eye-pitch-deg-path>
+      <ground-level-nearplane-m type="double">10.0</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+      <x-offset-m archive="y" type="double">  1.073 </x-offset-m> <!-- right -->
+      <y-offset-m archive="y" type="double">  0.796 </y-offset-m> <!--    up -->
+      <z-offset-m archive="y" type="double"> -1.48 </z-offset-m> <!--  back -->
+    </config>
+  </view>
+
+  <view n="0">
+    <internal archive="y">true</internal>
+    <config>
+      <x-offset-m archive="y" type="double"> 0.30 </x-offset-m> <!-- right -->
+      <y-offset-m archive="y" type="double">  1.03 </y-offset-m> <!--    up -->
+      <z-offset-m archive="y" type="double"> -0.081 </z-offset-m> <!--  back -->
+      <pitch-offset-deg>-15.0</pitch-offset-deg>
+      <default-field-of-view-deg type="double">63.0</default-field-of-view-deg>
+    </config>
+  </view>
+
+  <view n="1">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="2">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="3">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="4">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="5">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="6">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+	<walker>
+		<outside type="bool">false</outside>
+		<walking type="bool">false</walking>
+		<speed type="double">0.000006</speed>
+		<latitude-deg type="double">0.0</latitude-deg>
+		<longitude-deg type="double">0.0</longitude-deg>
+		<altitude-ft type="double">0.0</altitude-ft>
+		<heading-deg type="double">0.0</heading-deg>
+		<pitch-deg type="double">0.0</pitch-deg>
+		<roll-deg type="double">0.0</roll-deg>
+	</walker>
+
+  <hud>
+   <enable3d>false</enable3d>
+  </hud>
+
+  <help>
+    <key>
+      <name>Home</name>
+      <desc>Shift up</desc>
+    </key>
+    <key>
+      <name>End</name>
+      <desc>Shift down</desc>
+    </key>
+    <key>
+      <name>Backspace</name>
+      <desc>clutch disengage</desc>
+    </key>
+    <key>
+      <name>l/L</name>
+      <desc>Switch head lights on/off</desc>
+    </key>
+    <key>
+	<name>s</name>
+	<desc>Start engine</desc>
+    </key>
+    <key>
+      <name>o</name>
+      <desc>Walker gets outside</desc>
+    </key>
+    <key>
+      <name>o</name>
+      <desc>Walker gets back in</desc>
+    </key>
+    <key>
+      <name>w</name>
+      <desc>Walk forward while in Walk View</desc>
+    </key>
+  </help>
+	<menubar>
+		<default>
+			<menu n="10">
+				<label>FordT</label>
+					<enabled type="bool">true</enabled>
+					<item>
+						<label>tilt Windscreen forward</label>
+						<binding>
+          <command>property-toggle</command>
+          <property>/controls/gear/screen</property>
+						</binding>
+					</item>
+					<item>
+						<label>put Softroof on</label>
+						<binding>
+          <command>property-toggle</command>
+          <property>/controls/gear/roof</property>
+						</binding>
+					</item>
+					<item>
+						<label>Select Livery</label>
+              <binding>
+                <command>nasal</command>
+                <script>aircraft.livery.dialog.toggle()</script>
+              </binding>
+			</item>
+          	<item>
+			 <label>Show engine parameters</label>
+        		 <binding>
+			  <command>nasal</command>
+			   <script>
+			   var eng=gui.Dialog.new("/sim/gui/dialogs/FordT-flatbed/menu/dialog", "Aircraft/FordT-flatbed/Nasal/eng_param.xml");
+			   eng.open();
+			  </script>
+			 </binding>
+			</item>
+			<item>
+		  	 <label>Hide engine parameters</label>
+        		 <binding>
+			  <command>nasal</command>
+			   <script>
+			    var eng=gui.Dialog.new("/sim/gui/dialogs/FordT-flatbed/menu/dialog", "Aircraft/FordT-flatbed/Nasal/eng_param.xml");
+			    eng.close();
+			   </script>
+			  </binding>
+		 	 </item>
+		 </menu>
+
+		</default>
+	</menubar>
+
+     	<hitches>
+	<!-- make sure some properties do exist, when the list for multiplayer transfere is defined-->
+	<!-- they need to be in the same value, as they are initilized in the FDM, to get the same values after reset
+				    should fix this somehow-->
+			<aerotow>
+				<tow>
+					<length type="float">40</length>
+					<elastic-constant type="float">10000</elastic-constant>
+					<weight-per-m-kg-m type="float">0.3</weight-per-m-kg-m>
+					<dist type="float">1</dist>
+					<connected-to-property-node type="bool"></connected-to-property-node>
+					<brake-force type="float">100000</brake-force>
+					<connected-to-ai-or-mp-callsign type ="string">*</connected-to-ai-or-mp-callsign>
+					<end-force-x type ="float">0</end-force-x>
+					<end-force-y type ="float">0</end-force-y>
+					<end-force-z type ="float">0</end-force-z>
+				</tow>
+				<speed-in-tow-direction type="float">0</speed-in-tow-direction>
+				<open type="bool">true</open>
+				<local-pos-x type="float">0.78</local-pos-x>
+				<local-pos-y type="float">0</local-pos-y>
+				<local-pos-z type="float">-0.06</local-pos-z>
+				<is-slave type="bool">false</is-slave>
+			</aerotow>
+		</hitches>
+
+	<multiplay>
+	 <generic>
+	  <int n="1" alias="/controls/gear/roof"/> <!--roof--> 
+	  <int n="2" alias="/controls/gear/screen"/> <!--screen--> 
+	  <int n="3" alias="/controls/lighting/left_turn"/> <!--turn left--> 
+	  <int n="4" alias="/controls/lighting/right_turn"/> <!--turn_right--> 
+	  <float n="5" alias="/controls/gear/brake-left"/> <!--brake--> 
+	  <int n="6" alias="/controls/lighting/headlamp"/> <!--lamp-->
+	  <float n="7" alias="/controls/wiper/deg"/> <!--wiper-->
+	  <int n="8" alias="/engines/engine/running"/> <!--engine-->
+	  <int n="9" alias="/controls/horn/horn"/> <!--lamp-->
+	  <float n="10" alias="/gear/gear[0]/rollspeed-ms"/> <!--gear rotation-->
+	  <float n="11" alias="/gear/gear[1]/rollspeed-ms"/> <!--gear rotation-->
+	  <float n="12" alias="/gear/gear[2]/rollspeed-ms"/> <!--gear rotation-->
+	  <float n="13" alias="/gear/gear[3]/rollspeed-ms"/> <!--gear rotation-->
+	  <float n="14" alias="/controls/flight/aileron"/> <!--gear steering-->
+	 </generic>
+	</multiplay>
+
+       <weight n="0">
+      <name>Pilot</name>
+      <weight-lb>130</weight-lb>
+      <max-lb>190</max-lb>
+      <min-lb>100</min-lb>
+    </weight>
+
+ </sim>
+ 
+ <!--ENGINES-->
+ <engines>
+  <engine>
+   <rpm type="float">0</rpm>
+   <throttle type="float">0</throttle>
+   <rev_throttle type="float">0</rev_throttle>
+   <gear type="int">0</gear>
+   <cranking type="int">0</cranking>
+   <running type="int">0</running>
+   <clutch type="int">0</clutch>
+  </engine>
+ </engines>
+ 
+ <!--CONTROLS-->
+ <controls>
+  <!--aerotow-->
+  <aerotow>
+   <find-aircraft type="bool">false</find-aircraft>
+  </aerotow>
+  <!--engines-->
+  <engines>
+   <engine n="0">
+    <magnetos>3</magnetos>
+   </engine>
+  </engines>
+  
+  <!--gear-->
+  <gear>
+   <screen type="bool">false</screen>
+   <roof type="bool">false</roof>
+   <brake-parking type="bool">true</brake-parking>
+   <engine-brake type="float">0</engine-brake>
+  </gear>
+
+  <!--lighting-->
+  <lighting>
+   <turn type="int">0</turn>
+   <headlight type="int">0</headlight>
+   <alarm type="bool">false</alarm>
+   <right_turn type="int">0</right_turn>
+   <left_turn type="int">0</left_turn>
+   <headlamp type="bool">false</headlamp>
+  </lighting>
+  
+  <!--wiper-->
+  	<wiper>
+	 <factor type="int">0</factor>
+	 <deg type="double">0</deg>
+	</wiper>
+
+  <!--horn-->
+	<horn>
+	 <horn type="int">0</horn>
+	</horn>
+
+ </controls>
+ 
+ <!-- INPUT -->
+
+<input>
+	<keyboard>
+
+	  <!--shift up/down-->
+        <key n="362"> 
+         <name>Home</name>
+         <desc>Shift Up</desc>
+         <binding>
+          <command>property-adjust</command>
+          <property>/engines/engine/gear</property>
+          <step type="double">1</step>
+          <min type="double">-1</min>
+          <max type="double">2</max>
+	   </binding>
+        </key>
+        <key n="363"> 
+          <name>End</name>
+          <desc>Shift Down</desc>
+         <binding>
+          <command>property-adjust</command>
+          <property>/engines/engine/gear</property>
+          <step type="double">-1</step>
+          <min type="double">-1</min>
+          <max type="double">2</max>
+	   </binding>
+        </key>
+		<key n="8"> 
+         <name>Backspace</name>
+         <desc>Clutch</desc>
+         <binding>
+		  <command>property-assign</command>
+		  <property>/engines/engine/clutch</property>
+		  <value>1</value>
+	     </binding>
+		 <mod-up>
+		  <binding>
+           <command>property-assign</command>
+		   <property>/engines/engine/clutch</property>
+		   <value>0</value>
+          </binding>
+		 </mod-up>
+		</key>
+
+	  <!--starter-->
+        <key n="83"> 
+          <name>S</name>
+          <desc>Start</desc>
+          <binding> 
+            <command>property-assign</command>
+            <property>engines/engine[0]/cranking</property>
+            <value type="int">1</value>
+          </binding>
+        </key>
+        <key n="115"> 
+          <name>s</name>
+          <desc>Start</desc>
+          <binding> 
+            <command>property-assign</command>
+            <property>engines/engine[0]/cranking</property>
+            <value type="int">1</value>
+          </binding>
+        </key>
+
+	<!--instrument lights-->
+ 	<key n="108">
+ 	 <name>l</name>
+ 	 <desc>Switch on instrument illumination</desc>
+  	 <binding>
+ 	  <command>property-assign</command>
+ 	  <property>/controls/lighting/instruments-norm</property>
+	  <value type="int">1</value>
+	  </binding>
+	 </key>
+ 	<key n="76">
+ 	 <name>L</name>
+ 	 <desc>Switch off instrument illumination</desc>
+  	 <binding>
+ 	  <command>property-assign</command>
+ 	  <property>/controls/lighting/instruments-norm</property>
+	  <value type="int">0</value>
+	  </binding>
+	 </key>
+
+	<!--walker-->
+        <key n="111"> 
+          <name>o</name>
+          <desc>get Walker out</desc>
+          <binding> 
+            <command>nasal</command>
+          <script>walk.get_out();</script>
+          </binding>
+        </key>
+        <key n="79"> 
+          <name>O</name>
+          <desc>get Walker in</desc>
+          <binding> 
+            <command>nasal</command>
+          <script>walk.get_in();</script>
+          </binding>
+        </key>
+     		 <key n="119"> 
+      	  <name>w</name>
+     		   <desc>walk forward</desc>
+     	   <binding n="0"> 
+  			 <command>property-toggle</command>
+  			 <property>/sim/walker/walking</property>
+        </binding>
+				<mod-up>
+					<binding>
+			 		 <command>property-toggle</command>
+  				 <property>/sim/walker/walking</property>
+        </binding>
+				</mod-up>
+      </key>
+
+
+<!--turn signals-->
+      <key n="65">
+       <name>A</name>
+       <desc>Right turn signal</desc>
+       <binding>
+        <command>property-adjust</command>
+        <property>controls/lighting/turn</property>
+        <step type="double">1</step>
+        <min type="double">-1</min>
+        <max type="double">1</max>
+	 </binding>
+ 	</key>
+      <key n="97">
+       <name>a</name>
+       <desc>Right turn signal</desc>
+       <binding>
+        <command>property-adjust</command>
+        <property>controls/lighting/turn</property>
+        <step type="double">1</step>
+        <min type="double">-1</min>
+        <max type="double">1</max>
+	 </binding>
+ 	</key>
+      <key n="360">
+       <name>PageUp</name>
+       <desc>Right turn signal</desc>
+       <binding>
+        <command>property-adjust</command>
+        <property>controls/lighting/turn</property>
+        <step type="double">1</step>
+        <min type="double">-1</min>
+        <max type="double">1</max>
+	 </binding>
+ 	</key>
+
+
+      <key n="90">
+       <name>Z</name>
+       <desc>Left turn signal</desc>
+       <binding>
+        <command>property-adjust</command>
+        <property>controls/lighting/turn</property>
+        <step type="double">-1</step>
+        <min type="double">-1</min>
+        <max type="double">1</max>
+	 </binding>
+ 	</key> 
+      <key n="122">
+       <name>z</name>
+       <desc>Left turn signal</desc>
+       <binding>
+        <command>property-adjust</command>
+        <property>controls/lighting/turn</property>
+        <step type="double">-1</step>
+        <min type="double">-1</min>
+        <max type="double">1</max>
+	 </binding>
+ 	</key> 
+      <key n="361">
+       <name>PageDown</name>
+       <desc>Left turn signal</desc>
+       <binding>
+        <command>property-adjust</command>
+        <property>controls/lighting/turn</property>
+        <step type="double">-1</step>
+        <min type="double">-1</min>
+        <max type="double">1</max>
+	 </binding>
+ 	</key> 
+
+
+<!--headlight on-->
+      <key n="75">
+       <name>K</name>
+       <desc>Headlight</desc>
+       <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/headlamp</property>
+	 </binding>
+ 	</key> 
+
+      <key n="107">
+       <name>k</name>
+       <desc>Headlight</desc>
+       <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/headlamp</property>
+	 </binding>
+ 	</key> 
+	
+	<!--wipers-->
+
+	<key n="78">
+       <name>N</name>
+       <desc>Wiper freq decrease</desc>
+       <binding>
+        <command>property-adjust</command>
+        <property>controls/wiper/factor</property>
+	  <step type="int">-1</step>
+	  <min type="int">0</min>
+	  <max type="int">2</max>
+	 </binding>
+ 	</key> 
+
+     <key n="110">
+      <name>n</name>
+      <desc>Wiper freq increase</desc>
+      <binding>
+       <command>property-adjust</command>
+       <property>controls/wiper/factor</property>
+	  <step type="int">1</step>
+	  <min type="int">0</min>
+	  <max type="int">2</max>
+	 </binding>
+ 	</key> 
+
+	<!--horn-->
+        <key n="72"> 
+          <name>H</name>
+          <desc>Horn</desc>
+          <binding> 
+            <command>property-assign</command>
+            <property>controls/horn</property>
+            <value type="int">1</value>
+          </binding>
+        </key>
+        <key n="104"> 
+          <name>h</name>
+          <desc>Horn</desc>
+          <binding> 
+            <command>property-assign</command>
+            <property>controls/horn</property>
+            <value type="int">1</value>
+          </binding>
+	    <mod-up>
+           <binding> 
+            <command>property-assign</command>
+            <property>controls/horn</property>
+            <value type="int">0</value>
+          </binding>
+	    </mod-up>
+        </key>
+
+      <key n="23">
+			<name>Ctrl-w</name>
+			<desc>Place Winch 40m in front of vehicle</desc>
+			<binding>
+				<command>property-assign</command>
+				<property>/controls/winch/place</property>
+				<value type="bool">true</value>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/winch/place</property>
+					<value type="bool">false</value>
+				</binding>
+			</mod-up>
+			</key>
+			<key n="87">
+				<name>W</name>
+				<desc>Toggle winch hook</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+						var p = "/sim/hitches/winch/open";
+						setprop(p, !getprop(p));
+					</script>
+				</binding>
+			</key>
+			<key n="119">
+				<name>w</name>
+				<desc>Increase winch speed</desc>
+				<binding>
+					<command>nasal</command>
+					<script>interpolate("/sim/hitches/winch/winch/rel-speed", 1.0, 2)</script>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>nasal</command>
+						<script>interpolate("/sim/hitches/winch/winch/rel-speed", 0.0, 2)</script>
+					</binding>
+				</mod-up>
+			</key>
+			<key n="15">
+				<name>Ctrl-o</name>
+				<desc>Find aircraft for aerotow</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/aerotow/find-aircraft</property>
+					<value type="bool">true</value>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>property-assign</command>
+						<property>/controls/aerotow/find-aircraft</property>
+						<value type="bool">false</value>
+					</binding>
+				</mod-up>
+			</key>
+			<key n="111">
+				<name>o</name>
+				<desc>Lock aerotow hook</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>/sim/hitches/aerotow/open</property>
+					<value type="bool">false</value>
+				</binding>
+			</key>
+			<key n="79">
+				<name>O</name>
+				<desc>Open aerotow hook</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>/sim/hitches/aerotow/open</property>
+					<value type="bool">true</value>
+				</binding>
+			</key>
+
+	</keyboard>
+</input>
+
+<!-- -NASAL- -->
+ <nasal>
+
+  <FordT-flatbed>
+   <file>Aircraft/FordT-flatbed/Nasal/fordt.nas</file>
+  </FordT-flatbed>
+
+   <walk>
+     <file>Aircraft/FordT-flatbed/Nasal/walk.nas</file>
+     <script>main_loop();</script>
+   </walk>
+
+  <failure>
+   <file>Aircraft/FordT-flatbed/Nasal/failure.nas</file>
+  </failure>
+
+  <rain>
+   <file>Aircraft/FordT-flatbed/Nasal/rain.nas</file>
+  </rain>
+
+ </nasal>
+</PropertyList>
+
+
+
+

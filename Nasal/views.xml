@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <chase-distance-m type="double" archive="y">-14.0</chase-distance-m>
+
+  <view n="100">
+    <name>Walk View</name>
+    <type>lookfrom</type>
+    <config>
+      <eye-lat-deg-path>sim/walker/latitude-deg</eye-lat-deg-path>
+      <eye-lon-deg-path>sim/walker/longitude-deg</eye-lon-deg-path>
+      <eye-alt-ft-path>sim/walker/altitude-ft</eye-alt-ft-path>
+      <eye-heading-deg-path>sim/walker/heading-deg</eye-heading-deg-path>
+      <eye-roll-deg-path>sim/walker/roll-deg</eye-roll-deg-path>
+      <eye-pitch-deg-path>sim/walker/pitch-deg</eye-pitch-deg-path>
+      <ground-level-nearplane-m type="double">10.0</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+      <x-offset-m archive="y" type="double">  0.243 </x-offset-m> <!-- right -->
+      <y-offset-m archive="y" type="double">  0.496 </y-offset-m> <!--    up -->
+      <z-offset-m archive="y" type="double"> -0.058 </z-offset-m> <!--  back -->
+    </config>
+  </view>
+
+  <view n="0">
+    <internal archive="y">true</internal>
+    <config>
+      <x-offset-m archive="y" type="double"> -0.393 </x-offset-m> <!-- right -->
+      <y-offset-m archive="y" type="double">  0.800 </y-offset-m> <!--    up -->
+      <z-offset-m archive="y" type="double"> -1.469 </z-offset-m> <!--  back -->
+      <pitch-offset-deg>-15.0</pitch-offset-deg>
+      <default-field-of-view-deg type="double">63.0</default-field-of-view-deg>
+    </config>
+  </view>
+
+  <view n="1">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="2">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="3">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="4">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="5">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="6">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+</PropertyList>
