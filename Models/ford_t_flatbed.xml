@@ -36,7 +36,127 @@
     
 <!-- Livery System -->	
 
+  <!-- Rembrandt lighting effects -->
 
+   <model>
+    <path>Aircraft/FordT-flatbed/Models/Lights/HeadLight.xml</path>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
+    <offsets>
+      <x-m> -2.014 </x-m>
+      <y-m>  -0.421 </y-m>
+      <z-m>  0.213 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -2 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+   <model>
+    <path>Aircraft/FordT-flatbed/Models/Lights/HeadLight.xml</path>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
+    <offsets>
+      <x-m> -2.014 </x-m>
+      <y-m>  0.421 </y-m>
+      <z-m>  0.213 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -2 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FordT-flatbed/Models/Lights/HeadLight-rembrandt.xml</path>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <offsets>
+       <x-m> -2.014 </x-m>
+      <y-m>  -0.421 </y-m>
+      <z-m>  0.213 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -2 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FordT-flatbed/Models/Lights/HeadLight-rembrandt.xml</path>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <offsets>
+       <x-m> -2.014 </x-m>
+      <y-m>  0.421 </y-m>
+      <z-m>  0.213 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -2 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FordT-flatbed/Models/Lights/TailLight.xml</path>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
+    <offsets>
+      <x-m> 1.620 </x-m>
+      <y-m>  -0.722 </y-m>
+      <z-m>  0.0103 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FordT-flatbed/Models/Lights/TailLight.xml</path>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
+    <offsets>
+      <x-m> 1.620 </x-m>
+      <y-m>  0.722 </y-m>
+      <z-m>  0.0103 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FordT-flatbed/Models/Lights/TailLight-rembrandt.xml</path>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <offsets>
+      <x-m> 1.620 </x-m>
+      <y-m>  -0.722 </y-m>
+      <z-m>  0.0103 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FordT-flatbed/Models/Lights/TailLight-rembrandt.xml</path>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <offsets>
+      <x-m> 1.620 </x-m>
+      <y-m>  0.722 </y-m>
+      <z-m>  0.0103 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
 
 <!-- speedometer -->
   <model>
